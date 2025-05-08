@@ -1,0 +1,37 @@
+body {
+    background-color: #F8F9FA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-left: 250px;
+    width: 800px;
+    height: 150px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    width: 950px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+}
+
+.logo {
+    display: flex;
+    margin-top: -180px;
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.parent-container {
+    background-color: #FFF;
+}
+
+input::placeholder, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
