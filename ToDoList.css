@@ -77,6 +77,10 @@ input {
     margin-right: 5px;
 }
 
+#ajout {
+    padding: 0.7em;
+}
+
 button {
     background-color: #4786F5;
     border: none;
