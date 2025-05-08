@@ -44,10 +44,6 @@ body {
     margin: 5px 0 10px 0;
 }
 
-.left {
-    text-align: left;
-}
-
 .todo {
     flex-direction: row;
     width: fit-content;
@@ -63,6 +59,7 @@ form {
 span {
     font-weight: 700;
     font-size: 25px;
+    text-align: left;
 }
 
 #search {
