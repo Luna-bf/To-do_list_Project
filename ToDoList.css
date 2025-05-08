@@ -1,3 +1,7 @@
+.d-flex {
+    display: flex;
+}
+
 body {
     background-color: #F8F9FA;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,9 +33,84 @@ body {
 }
 
 .parent-container {
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
     background-color: #FFF;
+    width: 35%;
 }
 
-input::placeholder, button {
+#todo-list {
+    margin: 5px 0 10px 0;
+}
+
+.left {
+    text-align: left;
+}
+
+.todo {
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    margin: 1em 0 0.5em 0;
+}
+
+form {
+    flex-direction: row;
+    width: fit-content;
+}
+
+span {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#search {
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin: 8px 0 15px 30px;
+    align-items: center;
+    padding: 8px;
+}
+
+input {
+    padding: 0.2em;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #4786F5;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#list-unstyled {
+    list-style: none;
+}
+
+#all-tasks {
+    margin-top: 2.5em;
+}
+
+#all-tasks label:has(input:checked) { /*si label a son input coché alors {...} */
+    text-decoration: line-through;
+}
+
+#completed-tasks {
+    margin: 1em 0 2.5em 0;
+}
+
+hr {
+    background-color: red;
+    height: 1px;
+    border: 0;
 }
