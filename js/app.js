@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; //Version stricte de JavaScript
 
 //Je récupère mes éléments HTML
 /*const elements = {
