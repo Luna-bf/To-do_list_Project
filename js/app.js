@@ -55,7 +55,6 @@ function displayTasks() {
         const input = document.createElement('input');
         const span = document.createElement('span');
         const penIcon = document.createElement('i'); //Modification de la tâche (nécéssite le CDN de Font Awesome)
-        const checkIcon = document.createElement('i'); //Validation de la tâche
         const trashIcon = document.createElement('i'); //Suppression de la tâche
         input.type = 'checkbox'; //J'assigne un type checkbox à mon input, car la tâche doit être cochée afin d'être validée
     
@@ -76,8 +75,7 @@ function displayTasks() {
         à l'élément que je veux afficher
         */
         penIcon.classList.add('fa-solid', 'fa-pen'); //J'ajoute une icône à mon élément i (qui se trouvera à côté de l'élément span)
-        checkIcon.classList.add('fa-solid', 'fa-check'); //classList.add() permet d'ajouter une classe à un élément
-        trashIcon.classList.add('fa-solid', 'fa-trash');
+        trashIcon.classList.add('fa-solid', 'fa-trash'); //classList.add() permet d'ajouter une classe à un élément
 
         //Puis, toujours dans ma boucle for of, je gère les priorité avec un switch, j'ajoute une classe dédiée à chaque priorité
         switch(myTask.priority) {
@@ -134,8 +132,13 @@ function displayTasks() {
 
         //Puis j'attache tous les éléments ensemble
         label.append(input, labelName); //Je met l'input et le nom des tâches dans le label
-        li.append(label, span, penIcon, checkIcon, trashIcon); //Je met label, span et icon dans l'élément li
+        li.append(label, span, penIcon, trashIcon); //Je met label, span et icon dans l'élément li
         elements.allTasks.append(li); //Et enfin je met mon élément li dans l'élément qui contient l'id all-tasks en allant le chercher dans l'objet elements et en sélectionnant allTasks (le container)
+    
+        //J'ajoute un évènement à mon icône poubelle
+        trashIcon.addEventListener('click', () => {
+            li.remove(); //Si elle est cliquée, la tâche qui lui est associée est supprimée
+        });
     }
 }
 
