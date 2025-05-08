@@ -1,19 +1,14 @@
 'use strict'; //Version stricte de JavaScript
 
 //Je récupère mes éléments HTML
-/*const elements = {
+const elements = {
     allTasks: document.querySelector('#all-tasks ul'),
-    form: document.querySelector('#task-form'),
     checkbox: document.querySelector('#task-name'),
+    submitTaskBtn: document.querySelector("#submit-btn"),
     filterPriority: document.querySelector('#filter-priority'),
     filterCategory: document.querySelector('#filter-category'),
-    cards: document.getElementsByClassName('card'),
     displayBtn: document.querySelector('#display-btn'),
-    deleteBtn: document.querySelector('#delete-task-btn'),
-    deleteAllBtn: document.querySelector('#delete-all-btn'),
-    activatePrompt: document.querySelector('#activate-msg'),
-    deactivatePrompt: document.querySelector('#deactivate-msg'),
-};*/
+};
 
 //J'indique mes priorités et leur valeur
 const priorities = {
@@ -146,13 +141,13 @@ function displayTasks() {
 displayTasks();
 
 //J'ajoute un évènement à mon formulaire, lorsqu'il est soummit :
-elements.form.addEventListener('submit', (e) => {
+elements.submitTaskBtn.addEventListener('submit', (e) => {
     
     //J'empêche le rechargement de la page
     e.preventDefault();
         
     //Je récupère les données de mon formulaire
-    const formData = new FormData(elements.form);
+    const formData = new FormData(elements.submitTaskBtn);
         
     //Puis je créé une nouvelle tâche
     const newTask = {
@@ -167,17 +162,6 @@ elements.form.addEventListener('submit', (e) => {
         
     //Puis je met tout à jour en appelant ma fonction
     displayTasks();
-});
-
-
-//La fonction qui va me permettre de supprimer toutes les tâches
-elements.deleteAllBtn.addEventListener('click', () => {
-    if(window.confirm("Souhaitez vous vraiment supprimer toutes les tâches ?") === true) {
-        myTasks.length = 0; //Je retourne mon tableau myTasks avec une longueur (length) égale à zéro
-        displayTasks(); //Puis on met le tableau à jour
-    } else {
-        displayTasks(); //Si j'appuie sur 'Annuler' alors j'affiche ma liste de tâche
-    }
 });
 
 
