@@ -65,13 +65,12 @@ ul li {
 }
 
 form {
-    flex-direction: row;
+    flex-direction: column;
     width: fit-content;
 }
 
 span {
-    font-weight: 700;
-    font-size: 25px;
+    margin-left: 5px;
 }
 
 #search {
@@ -82,11 +81,11 @@ span {
     padding: 8px;
 }
 
-input {
-    padding: 0.2em;
+.input {
+    padding: 0.7em;
     border-radius: 5px;
     border: 1px solid silver;
-    margin-right: 5px;
+    margin: 1em 5px 0 0;
 }
 
 #ajout {
@@ -100,6 +99,9 @@ button {
     border-radius: 5px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1em;
 }
 
 button:hover {
@@ -110,22 +112,29 @@ button:hover {
     list-style: none;
 }
 
-#all-tasks {
-    margin-top: 2.5em;
+.empty-array-text {
+    margin-bottom: 2em;
+}
+
+#all-tasks-h2 {
+    margin: 2em 0 0.5em 0;
 }
 
 #all-tasks label:has(input:checked) { /*si label a son input coché alors {...} */
     text-decoration: line-through;
 }
 
+#completed-tasks-h2 {
+    margin: 2em 0 0.5em 0;
+}
+
 #completed-tasks {
-    margin: 1em 0 2.5em 0;
+    margin-bottom: 2em;
 }
 
 hr {
-    background-color: red;
-    height: 1px;
-    border: 0;
+    margin: 2em 0 1em 0;
+    width: 30em;
 }
 
 /********
@@ -168,4 +177,31 @@ i {
     padding: 0.4em;
     border-radius: 0.3em;
     cursor: pointer;
+}
+
+/***********************
+PRIORITES ET CATEGORIES
+***********************/
+
+.high {
+    color: red;
+}
+
+.normal {
+    color: forestgreen;
+}
+
+.low {
+    color: blue;
+}
+
+.none {
+    color: black;
+}
+
+
+/* Categories */
+
+.work, .studies, .food, .urgent, .personnal, .house, .hygiene, .hobbies, .other, .noCategory {
+    color: silver;
 }
