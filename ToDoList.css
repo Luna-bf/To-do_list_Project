@@ -16,6 +16,7 @@ body {
     height: 150px;
     text-decoration: none;
 }
+
 #nav {
     display: flex;
     justify-content: space-around;
@@ -24,6 +25,7 @@ body {
     font-size: 25pt;
     text-decoration: none;
 }
+
 .logo {
     display: flex;
     margin-top: -180px;
@@ -32,6 +34,7 @@ body {
     height: 100px;
     
 }
+
 #logo1 {
     display: flex;
     border-radius: 20px;
@@ -43,6 +46,11 @@ body {
     flex-direction: column;
     background-color: #FFF;
     width: 35%;
+    border-radius: 15px;
+}
+
+ul li {
+    list-style: none;
 }
 
 #todo-list {
@@ -64,7 +72,6 @@ form {
 span {
     font-weight: 700;
     font-size: 25px;
-    text-align: left;
 }
 
 #search {
@@ -119,4 +126,46 @@ hr {
     background-color: red;
     height: 1px;
     border: 0;
+}
+
+/********
+ICONES
+********/
+
+i {
+    padding: 0 0 5px 3.5px; /*top right bottom left*/
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 16px;
+    color: #303030;
+}
+
+.fa-pen {
+    color: black;
+    background-color: #fff;
+    margin: 0 0.2em 0 0.5em;
+    padding: 0.4em;
+}
+
+.fa-trash {
+    color: black;
+    background-color: #fff;
+    margin: 0 2em 0 0;
+    padding: 0.4em;
+}
+
+.fa-pen:hover {
+    color: white;
+    background-color: midnightblue;
+    padding: 0.4em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.fa-trash:hover {
+    color: white;
+    background-color: firebrick;
+    padding: 0.4em;
+    border-radius: 0.3em;
+    cursor: pointer;
 }
